@@ -1,0 +1,15 @@
+{
+  "name": "@buynance2/monorepo",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+        "packages/*"
+    ]
+  },
+  "scripts": {
+    "liquibot:start": "yarn workspace @buynance2/liquibot start"
+  }
+}
