@@ -8,6 +8,8 @@ if (process.env.NODE_ENV !== "production") {
 import { ethers, BigNumber } from "ethers";
 import { CONTRACT_ADDRESSES_MAINNET } from "./lib/constants";
 import { computeCR, computeLiquidationPrice } from "./lib/LiquidityMath";
+import { promisify } from "util";
+const sleep = promisify(setTimeout);
 const TroveManagerABI = require("./abi/TroveManager.json");
 const PriceFeedABI = require("./abi/PriceFeed.json");
 const SortedTrovesABI = require("./abi/SortedTroves.json");
@@ -110,6 +112,10 @@ async function main() {
       process.exit(0);
     }
   });
+
+  while (true) {
+    await sleep(10000);
+  }
 }
 
 //On every block:
