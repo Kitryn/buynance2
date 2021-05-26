@@ -13,11 +13,11 @@ const sleep = promisify(setTimeout);
 const TroveManagerABI = require("./abi/TroveManager.json");
 const PriceFeedABI = require("./abi/PriceFeed.json");
 const SortedTrovesABI = require("./abi/SortedTroves.json");
-// const provider = new ethers.providers.JsonRpcProvider(process.env.INFURA_URL);
+const provider = new ethers.providers.JsonRpcProvider(process.env.INFURA_URL);
 // const provider = new ethers.providers.JsonRpcProvider(process.env.GANACHE_URL);
-const provider = new ethers.providers.WebSocketProvider(
-  process.env.INFURA_WSS_URL ?? ""
-);
+// const provider = new ethers.providers.WebSocketProvider(
+//   process.env.INFURA_WSS_URL ?? ""
+// );
 // const provider = new ethers.providers.WebSocketProvider(
 //   process.env.GANACHE_WSS_URL ?? ""
 // );
