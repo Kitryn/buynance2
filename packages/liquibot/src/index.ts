@@ -60,17 +60,23 @@ async function main() {
     console.log(`Iteration ${iterations++}: block ${blockNumber}`);
     cachedBlockNumber = blockNumber;
 
-    [lastGoodPrice, liquidatee] = await Promise.all([
-      PriceFeedReadOnly.lastGoodPrice(),
-      SortedTrovesReadOnly.getLast(),
-    ]);
+    try {
+      [lastGoodPrice, liquidatee] = await Promise.all([
+        PriceFeedReadOnly.lastGoodPrice(),
+        SortedTrovesReadOnly.getLast(),
+      ]);
 
-    let _temp: any;
-    [totalSystemCR, _temp] = await Promise.all([
-      TroveManagerReadOnly.getTCR(lastGoodPrice),
-      TroveManagerReadOnly.getEntireDebtAndColl(liquidatee),
-    ]);
-    [liquidateeDebt, liquidateeColl] = [_temp.debt, _temp.coll];
+      let _temp: any;
+      [totalSystemCR, _temp] = await Promise.all([
+        TroveManagerReadOnly.getTCR(lastGoodPrice),
+        TroveManagerReadOnly.getEntireDebtAndColl(liquidatee),
+      ]);
+      [liquidateeDebt, liquidateeColl] = [_temp.debt, _temp.coll];
+    } catch (e) {
+      console.error("Error in web3 request!");
+      console.error(e);
+      return;
+    }
 
     liquidationPrice = computeLiquidationPrice(
       liquidateeDebt,
