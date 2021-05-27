@@ -1,0 +1,336 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "loanParamsId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "loanId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bool",
+        "name": "isTorqueLoan",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "initialMargin",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address[4]",
+        "name": "sentAddresses",
+        "type": "address[4]"
+      },
+      {
+        "internalType": "uint256[5]",
+        "name": "sentValues",
+        "type": "uint256[5]"
+      },
+      {
+        "internalType": "bytes",
+        "name": "loanDataBytes",
+        "type": "bytes"
+      }
+    ],
+    "name": "borrowOrTradeFromPool",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "loanId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "principal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ProtocolLike.LoanOpenData",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "loanParamsId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "collateralTokenAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getBorrowAmountByParams",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "borrowAmount",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "loanToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "collateralToken",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "loanTokenSent",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "collateralTokenSent",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "interestRate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "newPrincipal",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEstimatedMarginExposure",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "lender",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "loanToken",
+        "type": "address"
+      }
+    ],
+    "name": "getLenderInterestData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "interestPaid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "interestPaidDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "interestOwedPerDay",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "interestUnPaid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "interestFeePercent",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "principalTotal",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "loanParamsId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "newPrincipal",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRequiredCollateralByParams",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "collateralAmountRequired",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "lender",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "loanToken",
+        "type": "address"
+      }
+    ],
+    "name": "getTotalPrincipal",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "loanPool",
+        "type": "address"
+      }
+    ],
+    "name": "isLoanPool",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "lendingFeePercent",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "priceFeeds",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "loanId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositValueAsLoanToken",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositValueAsCollateralToken",
+        "type": "uint256"
+      }
+    ],
+    "name": "setDepositAmount",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "loanToken",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawAccruedInterest",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

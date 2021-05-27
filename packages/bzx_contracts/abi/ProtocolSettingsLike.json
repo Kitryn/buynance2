@@ -1,0 +1,80 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "loanParamsIdList",
+        "type": "bytes32[]"
+      }
+    ],
+    "name": "disableLoanParams",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "id",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "loanToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "collateralToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minInitialMargin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maintenanceMargin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxLoanTerm",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct LoanParamsStruct.LoanParams[]",
+        "name": "loanParamsList",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "setupLoanParams",
+    "outputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "loanParamsIdList",
+        "type": "bytes32[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "gasToken",
+    "outputs": [
+      {
+        "internalType": "contract ITokenHolderLike",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "tokenHolder",
+    "outputs": [
+      {
+        "internalType": "contract ITokenHolderLike",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
