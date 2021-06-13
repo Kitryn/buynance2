@@ -109,3 +109,5 @@ data.db
 artifacts/
 cache/
 .secret
+keys.json
+deployments/
