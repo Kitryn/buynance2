@@ -1,0 +1,982 @@
+[
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "bool", "name": "" }],
+    "name": "supportsInterface",
+    "inputs": [{ "type": "bytes4", "name": "_interfaceId" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "string", "name": "" }],
+    "name": "name",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "" }],
+    "name": "getApproved",
+    "inputs": [{ "type": "uint256", "name": "_tokenId" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "approve",
+    "inputs": [
+      { "type": "address", "name": "_to" },
+      { "type": "uint256", "name": "_tokenId" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "editSupportedERC721Tokens",
+    "inputs": [
+      { "type": "uint256", "name": "_stID" },
+      { "type": "address", "name": "_stokenAddress" },
+      { "type": "string", "name": "_stokenName" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "balanceOfMyETH",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "staker_balance" }],
+    "name": "getStakerExternalERC20Balance",
+    "inputs": [
+      { "type": "address", "name": "_staker" },
+      { "type": "address", "name": "erc20token" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "allocateERC20byHoldings",
+    "inputs": [
+      { "type": "address", "name": "_deposittoken" },
+      { "type": "uint256", "name": "_amount" },
+      { "type": "address", "name": "_check_token" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "get_account" }],
+    "name": "getKickbackAccount",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address[]", "name": "" }],
+    "name": "getAllOwners",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "totalSupply",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setCurrentPrice",
+    "inputs": [{ "type": "uint256", "name": "newPrice" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "bytes4", "name": "" }],
+    "name": "InterfaceId_ERC165",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [
+      { "type": "string", "name": "name" },
+      { "type": "uint256", "name": "decimals" }
+    ],
+    "name": "getTokenInfo",
+    "inputs": [{ "type": "address", "name": "_check_token" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "mintToken",
+    "inputs": [],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setHostERC20Contract",
+    "inputs": [{ "type": "address", "name": "newContract" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "transferFrom",
+    "inputs": [
+      { "type": "address", "name": "_from" },
+      { "type": "address", "name": "_to" },
+      { "type": "uint256", "name": "_tokenId" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "get_account" }],
+    "name": "getHostERC20Contract",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setKickbackAccount",
+    "inputs": [{ "type": "address", "name": "newAccount" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "tokenOfOwnerByIndex",
+    "inputs": [
+      { "type": "address", "name": "_owner" },
+      { "type": "uint256", "name": "_index" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "allocateERC20byBalance",
+    "inputs": [
+      { "type": "address", "name": "_deposittoken" },
+      { "type": "uint256", "name": "_amount" },
+      { "type": "address", "name": "_check_token" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "depositERC20toAddress",
+    "inputs": [
+      { "type": "address", "name": "token" },
+      { "type": "uint256", "name": "amount" },
+      { "type": "address", "name": "recipient" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [
+      { "type": "uint256", "name": "_noftokens" },
+      { "type": "uint256", "name": "_stID" },
+      { "type": "address", "name": "_stokenAddress" },
+      { "type": "string", "name": "_stokenName" },
+      { "type": "uint256", "name": "_stokenDecimals" }
+    ],
+    "name": "getSupportedERC20Tokens",
+    "inputs": [{ "type": "uint256", "name": "stokenID" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "safeTransferFrom",
+    "inputs": [
+      { "type": "address", "name": "_from" },
+      { "type": "address", "name": "_to" },
+      { "type": "uint256", "name": "_tokenId" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "addGreyAddress",
+    "inputs": [
+      { "type": "address", "name": "greyAddress" },
+      { "type": "string", "name": "_name" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "transferERC20toAddress",
+    "inputs": [
+      { "type": "address", "name": "token" },
+      { "type": "uint256", "name": "amount" },
+      { "type": "address", "name": "recipient" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "manageBaseURL",
+    "inputs": [{ "type": "string", "name": "new_baseurl" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "balanceOfMyERC20",
+    "inputs": [{ "type": "address", "name": "token" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "bool", "name": "" }],
+    "name": "exists",
+    "inputs": [{ "type": "uint256", "name": "_tokenId" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "tokenByIndex",
+    "inputs": [{ "type": "uint256", "name": "_index" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "tokens",
+    "inputs": [
+      { "type": "address", "name": "" },
+      { "type": "address", "name": "" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "balanceOfUserETH",
+    "inputs": [{ "type": "address", "name": "user" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "editGreyAddresses",
+    "inputs": [
+      { "type": "uint256", "name": "_ID" },
+      { "type": "address", "name": "greyAddress" },
+      { "type": "string", "name": "greyName" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "transferOwnTokens",
+    "inputs": [
+      { "type": "uint256[]", "name": "_ids" },
+      { "type": "address", "name": "_to" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setManagementAccount",
+    "inputs": [{ "type": "address", "name": "newAccount" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "" }],
+    "name": "ownerOf",
+    "inputs": [{ "type": "uint256", "name": "_tokenId" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address[]", "name": "" }],
+    "name": "getDistinctOwners",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "balanceOf",
+    "inputs": [{ "type": "address", "name": "_owner" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "renounceOwnership",
+    "inputs": [],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "get_account" }],
+    "name": "getManagementAccount",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "fee" }],
+    "name": "getWithdrawtFee",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "allocateERC20byTotals",
+    "inputs": [
+      { "type": "address", "name": "_deposittoken" },
+      { "type": "uint256", "name": "_amount" },
+      { "type": "address", "name": "_check_token" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "staker_balance" }],
+    "name": "getStakerExternalERC721Balance",
+    "inputs": [
+      { "type": "address", "name": "_staker" },
+      { "type": "address", "name": "_nft" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "payable": true,
+    "outputs": [],
+    "name": "allocateETHbyHoldings",
+    "inputs": [{ "type": "string", "name": "_description" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [
+      { "type": "uint256", "name": "_nof" },
+      { "type": "uint256", "name": "_greyID" },
+      { "type": "address", "name": "_greyAddress" },
+      { "type": "string", "name": "_greyName" }
+    ],
+    "name": "getGreyAddresses",
+    "inputs": [{ "type": "uint256", "name": "addressID" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "editSupportedERC20Tokens",
+    "inputs": [
+      { "type": "uint256", "name": "_stID" },
+      { "type": "address", "name": "_stokenAddress" },
+      { "type": "string", "name": "_stokenName" },
+      { "type": "uint256", "name": "_stokenDecimals" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "" }],
+    "name": "owner",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "manageMaxSupply",
+    "inputs": [{ "type": "uint256", "name": "new_supply" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "calcTotalERC20Deposits",
+    "inputs": [{ "type": "address", "name": "erc20token" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256[]", "name": "" }],
+    "name": "myTokens",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "string", "name": "" }],
+    "name": "symbol",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setCommunityReward",
+    "inputs": [{ "type": "uint256", "name": "newReward" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "payable": true,
+    "outputs": [],
+    "name": "depositETHtoAddress",
+    "inputs": [{ "type": "address", "name": "recipient" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "fee" }],
+    "name": "getManagementFee",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "mintTokenForClient",
+    "inputs": [{ "type": "address", "name": "_client" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "string", "name": "base_url" }],
+    "name": "viewBaseURL",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "withdrawERC20",
+    "inputs": [
+      { "type": "address", "name": "token" },
+      { "type": "uint256", "name": "amount" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setApprovalForAll",
+    "inputs": [
+      { "type": "address", "name": "_to" },
+      { "type": "bool", "name": "_approved" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "payable": true,
+    "outputs": [],
+    "name": "buyToken",
+    "inputs": [],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "transferETHtoAddress",
+    "inputs": [
+      { "type": "address", "name": "recipient" },
+      { "type": "uint256", "name": "amount" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "addSupportedERC20Token",
+    "inputs": [
+      { "type": "address", "name": "tokenAddress" },
+      { "type": "string", "name": "_name" },
+      { "type": "uint256", "name": "_decimals" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "total_totals" }],
+    "name": "calcAllERC20Holdings",
+    "inputs": [{ "type": "address", "name": "erc20token" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "calcTotalERC20Holdings",
+    "inputs": [{ "type": "address", "name": "erc20token" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "reward" }],
+    "name": "getCommunityReward",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setWithdrawFee",
+    "inputs": [{ "type": "uint256", "name": "newFee" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "safeTransferFrom",
+    "inputs": [
+      { "type": "address", "name": "_from" },
+      { "type": "address", "name": "_to" },
+      { "type": "uint256", "name": "_tokenId" },
+      { "type": "bytes", "name": "_data" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setCommunityAccount",
+    "inputs": [{ "type": "address", "name": "newAccount" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "string", "name": "URI" }],
+    "name": "tokenURI",
+    "inputs": [{ "type": "uint256", "name": "_ID" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "address", "name": "get_account" }],
+    "name": "getCommunityAccount",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "allocateERC20byNFTs",
+    "inputs": [
+      { "type": "address", "name": "_token" },
+      { "type": "uint256", "name": "_amount" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "" }],
+    "name": "balanceOfUserERC20",
+    "inputs": [
+      { "type": "address", "name": "token" },
+      { "type": "address", "name": "user" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "staker_balance" }],
+    "name": "getStakerERC20Deposits",
+    "inputs": [
+      { "type": "address", "name": "_staker" },
+      { "type": "address", "name": "erc20token" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "allocateERC20byERC721Holdings",
+    "inputs": [
+      { "type": "address", "name": "_token" },
+      { "type": "uint256", "name": "_amount" },
+      { "type": "address", "name": "_nft" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "depositERC20toMyself",
+    "inputs": [
+      { "type": "address", "name": "token" },
+      { "type": "uint256", "name": "amount" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "addSupportedERC721Token",
+    "inputs": [
+      { "type": "address", "name": "tokenAddress" },
+      { "type": "string", "name": "_name" }
+    ],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "staker_balance" }],
+    "name": "getStakerTotalERC20Balance",
+    "inputs": [
+      { "type": "address", "name": "_staker" },
+      { "type": "address", "name": "erc20token" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "bool", "name": "" }],
+    "name": "isApprovedForAll",
+    "inputs": [
+      { "type": "address", "name": "_owner" },
+      { "type": "address", "name": "_operator" }
+    ],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "price" }],
+    "name": "getCurrentPrice",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "withdrawETH",
+    "inputs": [{ "type": "uint256", "name": "amount" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "transferOwnership",
+    "inputs": [{ "type": "address", "name": "_newOwner" }],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [
+      { "type": "uint256", "name": "nofevents" },
+      { "type": "uint256", "name": "aeventID" },
+      { "type": "address", "name": "aeventToken" },
+      { "type": "uint256", "name": "aeventAmount" },
+      { "type": "string", "name": "aeventDescription" },
+      { "type": "uint256", "name": "aeventType" },
+      { "type": "uint256", "name": "aeventTime" }
+    ],
+    "name": "getAllocationEvent",
+    "inputs": [{ "type": "uint256", "name": "_eventID" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [{ "type": "uint256", "name": "current_max_supply" }],
+    "name": "viewMaxSupply",
+    "inputs": [],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "payable": false,
+    "outputs": [
+      { "type": "uint256", "name": "_noftokens" },
+      { "type": "uint256", "name": "_stID" },
+      { "type": "address", "name": "_stokenAddress" },
+      { "type": "string", "name": "_stokenName" }
+    ],
+    "name": "getSupportedERC721Tokens",
+    "inputs": [{ "type": "uint256", "name": "stokenID" }],
+    "constant": true
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "payable": true,
+    "outputs": [],
+    "name": "depositETH",
+    "inputs": [],
+    "constant": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "outputs": [],
+    "name": "setManagementFee",
+    "inputs": [{ "type": "uint256", "name": "newFee" }],
+    "constant": false
+  },
+  {
+    "type": "constructor",
+    "stateMutability": "nonpayable",
+    "payable": false,
+    "inputs": []
+  },
+  { "type": "fallback", "stateMutability": "payable", "payable": true },
+  {
+    "type": "event",
+    "name": "BoughtToken",
+    "inputs": [
+      { "type": "address", "name": "buyer", "indexed": true },
+      { "type": "uint256", "name": "tokenId", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Deposit",
+    "inputs": [
+      { "type": "address", "name": "token", "indexed": false },
+      { "type": "address", "name": "user", "indexed": false },
+      { "type": "uint256", "name": "amount", "indexed": false },
+      { "type": "uint256", "name": "balance", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Withdraw",
+    "inputs": [
+      { "type": "address", "name": "token", "indexed": false },
+      { "type": "address", "name": "user", "indexed": false },
+      { "type": "uint256", "name": "amount", "indexed": false },
+      { "type": "uint256", "name": "balance", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipRenounced",
+    "inputs": [{ "type": "address", "name": "previousOwner", "indexed": true }],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferred",
+    "inputs": [
+      { "type": "address", "name": "previousOwner", "indexed": true },
+      { "type": "address", "name": "newOwner", "indexed": true }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Transfer",
+    "inputs": [
+      { "type": "address", "name": "_from", "indexed": true },
+      { "type": "address", "name": "_to", "indexed": true },
+      { "type": "uint256", "name": "_tokenId", "indexed": true }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Approval",
+    "inputs": [
+      { "type": "address", "name": "_owner", "indexed": true },
+      { "type": "address", "name": "_approved", "indexed": true },
+      { "type": "uint256", "name": "_tokenId", "indexed": true }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ApprovalForAll",
+    "inputs": [
+      { "type": "address", "name": "_owner", "indexed": true },
+      { "type": "address", "name": "_operator", "indexed": true },
+      { "type": "bool", "name": "_approved", "indexed": false }
+    ],
+    "anonymous": false
+  }
+]
