@@ -7,14 +7,13 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/@openzeppelin/contracts/**"
     ]
   },
   "scripts": {
     "liquibot:start": "yarn workspace @buynance2/liquibot start",
     "bzx:start": "yarn workspace @buynance2/bzx start",
-    "shared:build": "yarn workspace @buynance2/shared build"
+    "ref_contracts:build": "yarn workspace @buynance2/ref_contracts build",
+    "shared:build": "yarn workspace @buynance2/shared build",
+    "contracts:build": "yarn workspace @buynance2/contracts build"
   }
 }
