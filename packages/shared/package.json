@@ -21,6 +21,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "postbuild": "npx ts-node ./tools/build.ts",
     "start": "npx ts-node --project tsconfig.json --files ./src/index.ts"
   }
 }
